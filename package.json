@@ -1,9 +1,9 @@
 {
-  "name": "typescript-cli-starter",
+  "name": "jira-issue-creator",
   "private": true,
   "version": "1.0.0",
-  "description": "A simple and zero-opinion typescript starter template for building cross-platform command line applications.",
-  "author": "Khalid Zoabi <kzoabi@outlook.com>",
+  "description": "",
+  "author": "bogdan lupu <lupu@gmail.com>",
   "keywords": [
     "typescript",
     "cli",
@@ -17,20 +17,27 @@
     "!dist/**/*.test.js"
   ],
   "scripts": {
-    "dev": "ts-node ./src/cli.ts",
+    "dev": "ts-node ./src/index.ts",
+    "start": "node ./dist/index.js",
     "clean": "rimraf ./dist/ ./exec/",
     "build": "npm run clean && tsc",
     "test": "npm run build && ava --verbose",
     "bundle": "npm run build && pkg . --out-dir ./exec/"
   },
   "devDependencies": {
-    "ava": "^2.2.0",
-    "pkg": "^4.4.0",
-    "rimraf": "^2.6.3",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "@types/commander": "2.12.2",
+    "@types/node": "14.14.34",
+    "ava": "^3.15.0",
+    "pkg": "^4.4.9",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
   },
   "dependencies": {
-    "commander": "^2.20.0"
+    "axios": "0.21.1",
+    "commander": "^7.1.0",
+    "dotenv": "8.2.0",
+    "rxjs": "6.6.6",
+    "yaml": "1.10.1"
   }
 }
