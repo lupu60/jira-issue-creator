@@ -48,7 +48,7 @@ if (options.example) {
   description: |
     Description ndksandk
 
-  ---
+---
   summary: Hello from api
   description: |
     ### Heading
